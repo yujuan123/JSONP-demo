@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="./js/jquery.js"></script>
+    <script type="text/javascript">
+       function loadData(){
+           $.get('http://localhost:4001/json-data',function(data){
+               $('#data').text(data);
+           })
+       }
+    </script>
+</head>
+<body>
+<p>4000用来加载资源,但是4000上想获得4001的数据资源，就得解决跨域</p>
+<button onclick="loadData()">获取数据</button>
+<div id="data"></div>
+</body>
+</html>
